@@ -29,7 +29,9 @@ public class ClassName {
 - **`double`** : 64-bit decimal (floating point) number
 - **`boolean`** : true/false 
 - `char` : 16-bit Unicode character ('\u0000' (0) to '\uffff' (65,535))
+  - enclosed in *single* quotes
 - **`String`** : array of characters (not a Primitive Type)
+  - enclosed in *double* quotes
 
 #####Variable Specifics
 - Naming:
@@ -85,27 +87,19 @@ Notes:
   - Ex: `int x = 103; System.out.println( x++ );` outputs 103 (and stores 104)
 
 ###Math Methods
-- Simple:
-  - `Math.abs(x);` = absolute value of x
-  - `Math.pow(x, y);` = x to the power of y
-  - `Math.sqrt(x);` = square root of x
-  - `Math.ceil(x);` = returns next highest whole number
-  - `Math.floor(x);` = returns next lowest whole number
-  - `Math.min(x, y);` = returns minimum of x or y
-  - `Math.max(x, y);` = returns maximum of x or y
-  - `Math.round(x);` = rounds to nearest whole number
-  - `Math.random();` = returns random `double` between 0<=r<1
-  - `Math.PI;` = returns 3.14159625...
-- Advanced:
-  - `Math.log(x);` = log base e of x
-  - `Math.sin(x);` = sin of angle x (in rad)
-  - `Math.cos(x);` = cos of angle x (in rad)
-  - `Math.tan(x);` = tan of angle x (in rad)
-  - `Math.asin(x);` = arcsine of x in range -PI/2 to PI/2
-  - `Math.acos(x);` = arccosine of x in range -PI/2 to PI/2
-  - `Math.atan(x);` = arctan of x in range -PI/2 to PI/2
-  - `Math.toDegrees(angRad);` = converts radians into degrees
-  - `Math.toRadians(angDeg);` = converts degrees into radians
+
+| Simple:                                             | Advanced:                                           |
+|-----------------------------------------------------|-----------------------------------------------------|
+| `Math.abs(x);` = absolute value of x                | `Math.log(x);` = log base e of x                    |
+| `Math.pow(x, y);` = x to the power of y             | `Math.sin(x);` = sin of angle x (in rad)            |
+| `Math.sqrt(x);` = square root of x                  | `Math.cos(x);` = cos of angle x (in rad)            |
+| `Math.ceil(x);` = returns next highest whole number | `Math.tan(x);` = tan of angle x (in rad)            |
+| `Math.floor(x);` = returns next lowest whole number | `Math.asin(x);` = arcsine in range -PI/2 to PI/2    |
+| `Math.min(x, y);` = returns minimum of x or y       | `Math.acos(x);` = arccosine in range -PI/2 to PI/2  |
+| `Math.max(x, y);` = returns maximum of x or y       | `Math.atan(x);` = arctan in range -PI/2 to PI/2     |
+| `Math.round(x);` = rounds to nearest whole number   | `Math.toDegrees(angRad);` = radians to degrees      |
+| `Math.random();` = returns random `double` 0<=r<1   | `Math.toRadians(angDeg);` = degrees to radians      |
+| `Math.PI;` = returns 3.14159625...                  |                                                     |
 
 ###Input
 ```java
@@ -127,12 +121,13 @@ public class ClassName {
     
     System.out.print( "Enter your line here: " );
     String line = s.nextLine();
+    char ch = line.charAt(0); // gets the first letter (char) of the line
   
   } // end main method
 } // end ClassName
 ```
 
-## Control Structures
+# Control Structures
 
 ### *if* statements
 ```java
@@ -145,9 +140,77 @@ if ( condition ) {
 }
 ```
 
-### *switch* and *char*
+### *switch*
+Similar to *if*, allows for multiple (specified) cases.
+
+- **`int`** switch
+```java
+Scanner s = new Scanner( System.in );
+int choice = s.nextInt();
+
+switch( choice ) {
+  case 1: // First choice
+    command;
+    break; // breaks out of the switch structure
+  case 2: // Second choice
+    command;
+    break;
+  default: // Fallback and Error catching
+    command;
+}
+```
+
+- **`char`** switch
+```java
+Scanner s = new Scanner( System.in );
+String choice = s.nextLine();
+char ch = choice.charAt(0);
+
+switch( ch ) {
+  case 'A':
+  case 'a':
+    command;
+    break;
+  case 'B':
+  case 'b':
+    command;
+    break;
+  default:
+    command;
+}
+```
+
+- **`String`** switch (from Java 7.0)
+```java
+Scanner s = new Scanner( System.in );
+String choice = s.nextLine();
+
+switch( choice ) {
+  case "Hello":
+    command;
+    break;
+  case "Good bye":
+    command;
+    break;
+  default:
+    command;
+}
+```
 
 ### *for* loops
+
+```java
+for( int i = x; i <= y; i++ ) {
+  commandToRepeat;
+}
+```
+- Contains 3 parts:
+  1. Starting expression *(at which __value__ should the loop begin?)*
+  2. Control expression *(for __how long__ will the loop continue?)*
+  3. Step expression *(by how much should the variable __change__ each time?)*
+- Notes:
+  - `break;` in the loop will exit it regardless of the condition
+  - **Scope:** variables declared 
 
 ### *while* loops
 
