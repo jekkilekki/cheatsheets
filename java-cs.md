@@ -68,6 +68,29 @@ public class ClassName {
   - `String.equals( "Test" );` : comparison operator for Strings
   - `String.equalsIgnoreCase( "Test" );` : comparison operator that ignores case
 
+###`char`
+```java
+char ch = "A";      // illegal because "A" is a String - double quotes
+String s = 'B';     // illegal because 'B' is a char - single quotes
+char ch = 'C'; 
+int i = ch;         // legal because 'C' has an ASCII int value of 67
+int j = 68;
+char ch = (char) j; // legal IF cast to char (illegal otherwise) and j < 65536 (max ASCII value)
+```
+- Conversion:
+  - String to `char` : `String s = "W"; char ch = s.charAt(0);`
+  - `char` to String : `char ch = 'X'; String s = "" + ch; // Concatenate char to an empty String`
+  - Capital to small : `char big = 'H'; char sm = (char)(big + 32); // increases ASCII value to lowercase`
+  - `Character.toLowerCase(ch);`
+  - `Character.toUpperCase(ch);`
+- What are you? (returns true/false):
+  - `Character.isDigit(ch);`
+  - `Character.isLetter(ch);`
+  - `Character.isLetterOrDigit(ch);`
+  - `Character.isWhitespace(ch);`
+  - `Character.isLowerCase(ch);`
+  - `Character.isUpperCase(ch);`
+
 ###Operators
 PEMDAS (parenthesis, exponents, multiplication, division, addition, subtraction)
 
@@ -128,11 +151,11 @@ public class ClassName {
 } // end ClassName
 ```
 
-# Control Structures
+#Control Structures
   - **Scope:** variables declared in/during *any* Control Structures only pertain to *that* particular Control Structure
   - **Nesting:** "nested ifs" and "nested loops" are ifs *within* if statements and loops *within* loops. Examples below
 
-### `if` statements
+###`if` statements
 ```java
 if ( condition ) {
   command;
@@ -154,7 +177,7 @@ if ( condition ) {
 }
 ```
 
-### `switch`
+###`switch`
 Similar to *if*, allows for multiple (specified) cases.
 
 - **`int`** switch
@@ -209,7 +232,7 @@ switch( choice ) {
 }
 ```
 
-### Loops
+###Loops
 
 - Notes about loops:
   - Loops generally contain 3 parts:
@@ -221,7 +244,7 @@ switch( choice ) {
   - The loop control expression (condition) **_must_** eventually become false or you will have an "infinite loop" 
   - Loops without {} braces are understood to contain *only the __very next__ line* of code and no more
   
-#### `for` loops
+####`for` loops
 
 ```java
 for ( int i = x; i <= y; i++ ) {
@@ -237,7 +260,7 @@ for ( int i = 0; i < 5; i++ ) {
 }
 ```
 
-#### `while` and `do while` loops
+####`while` and `do while` loops
 ```java
 while ( condition ) {
   command;
@@ -255,4 +278,4 @@ do {
   - `while` : condition is tested at the **start** of the loop
   - `do while` : condition is tested at the **end** of the loop
 
-## Classes and Objects
+#Classes and Objects
