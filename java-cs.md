@@ -58,6 +58,7 @@ public class ClassName {
   - `String.substring(start [,end]);` : prints part of a String
   - `String.toLowerCase();` : lowercases a String
   - `String.toUpperCase();` : all capitals
+  - `String.charAt(x);` : returns a `char` at the index of `x` within the String
 - Escape sequences:
   - `\"` prints "
   - `\t` TAB
@@ -128,8 +129,10 @@ public class ClassName {
 ```
 
 # Control Structures
+  - **Scope:** variables declared in/during *any* Control Structures only pertain to *that* particular Control Structure
+  - **Nesting:** "nested ifs" and "nested loops" are ifs *within* if statements and loops *within* loops. Examples below
 
-### *if* statements
+### `if` statements
 ```java
 if ( condition ) {
   command;
@@ -138,9 +141,20 @@ if ( condition ) {
 } else {
   defaultCommand;
 }
+
+// Nested if
+if ( condition ) {
+  if ( condition ) {
+    command;
+  } else {
+    command;
+  }
+} else {
+  command;
+}
 ```
 
-### *switch*
+### `switch`
 Similar to *if*, allows for multiple (specified) cases.
 
 - **`int`** switch
@@ -159,7 +173,6 @@ switch( choice ) {
     command;
 }
 ```
-
 - **`char`** switch
 ```java
 Scanner s = new Scanner( System.in );
@@ -179,7 +192,6 @@ switch( ch ) {
     command;
 }
 ```
-
 - **`String`** switch (from Java 7.0)
 ```java
 Scanner s = new Scanner( System.in );
@@ -197,21 +209,50 @@ switch( choice ) {
 }
 ```
 
-### *for* loops
+### Loops
+
+- Notes about loops:
+  - Loops generally contain 3 parts:
+    1. Starting expression *(at which __value__ should the loop begin?)*
+    2. Control expression *(for __how long__ will the loop continue?)*
+    3. Step expression *(by how much should the variable __change__ each time?)*
+  - `break;` in the loop will exit it regardless of the condition
+  - `continue;` the remaining loop code will be skipped this time, but the loop will continue
+  - The loop control expression (condition) **_must_** eventually become false or you will have an "infinite loop" 
+  - Loops without {} braces are understood to contain *only the __very next__ line* of code and no more
+  
+#### `for` loops
 
 ```java
-for( int i = x; i <= y; i++ ) {
+for ( int i = x; i <= y; i++ ) {
   commandToRepeat;
 }
-```
-- Contains 3 parts:
-  1. Starting expression *(at which __value__ should the loop begin?)*
-  2. Control expression *(for __how long__ will the loop continue?)*
-  3. Step expression *(by how much should the variable __change__ each time?)*
-- Notes:
-  - `break;` in the loop will exit it regardless of the condition
-  - **Scope:** variables declared 
 
-### *while* loops
+// Nested loop
+for ( int i = 0; i < 5; i++ ) {
+  commandToRepeat;    // executes 5 times
+  for ( int j = 0; j < 8; j++ ) {
+    commandToRepeat;  // executes 40 times
+  }
+}
+```
+
+#### `while` and `do while` loops
+```java
+while ( condition ) {
+  command;
+}
+
+// Do while
+do {
+  command;
+} while ( condition );
+```
+- Notes: 
+  - Starting expression and Step expression are *not* part of the loop
+  - The `do while` loop will execute *at least* once even if the condition is `false` from the start
+- Difference between `while` and `do while`:
+  - `while` : condition is tested at the **start** of the loop
+  - `do while` : condition is tested at the **end** of the loop
 
 ## Classes and Objects
