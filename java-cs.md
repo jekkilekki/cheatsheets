@@ -70,6 +70,8 @@ public class ClassName {
 
 ####Advanced `String` Methods:
 
+- `@return int`
+
 | Searches __left to right__ for `@param`   | Searches __right to left__ for `@param`       |
 |-------------------------------------------|-----------------------------------------------|
 | `String.indexOf( String str );`           | `String.lastIndexOf( String str );`           |
@@ -97,12 +99,12 @@ __`define: delimiter`__ : a series of characters that separates txt in a `Scanne
 
 | Code                                      | Position after execution       |
 |-------------------------------------------|-----------------------------------------------|
-| `Scanner s = new Scanner( "for demo purposes" );`           | `String.lastIndexOf( String str );`           |
-| `System.out.println( s.next() );` | `String.lastIndexOf( String str, int from );` |
-| `System.out.println( sc.findInLine( "ur" );`              | `String.lastIndexOf( char ch );`              |
-| `String ns = s.next(); System.out.println( ns );`    | `String.lastIndexOf( char ch, int from );`    |
-| `String.indexOf( int ascii );`            | `String.lastIndexOf( int ascii );`            |
-| `String.indexOf( int ascii, int from );`  | `String.lastIndexOf( int ascii, int from );`  |
+| `Scanner s = new Scanner( "for demo purposes" );`   | \*for demo purposes   |
+| `System.out.println( s.next() );`                   | for\* demo purposes    |
+| `System.out.println( sc.findInLine( "ur" );`        | for demo pur\*poses             |
+| `String ns = s.next(); System.out.println( ns );`   | for demo purposes\*    |
+| `s.useDelimiter( "" );`                                 | for demo purposes            |
+| `String.indexOf( int ascii, int from );`            | for demo purposes  |
 
 ###`char`
 ```java
