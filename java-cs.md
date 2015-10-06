@@ -68,6 +68,42 @@ public class ClassName {
   - `String.equals( "Test" );` : comparison operator for Strings
   - `String.equalsIgnoreCase( "Test" );` : comparison operator that ignores case
 
+####Advanced `String` Methods:
+
+| Searches __left to right__ for `@param`   | Searches __right to left__ for `@param`       |
+|-------------------------------------------|-----------------------------------------------|
+| `String.indexOf( String str );`           | `String.lastIndexOf( String str );`           |
+| `String.indexOf( String str, int from );` | `String.lastIndexOf( String str, int from );` |
+| `String.indexOf( char ch );`              | `String.lastIndexOf( char ch );`              |
+| `String.indexOf( char ch, int from );`    | `String.lastIndexOf( char ch, int from );`    |
+| `String.indexOf( int ascii );`            | `String.lastIndexOf( int ascii );`            |
+| `String.indexOf( int ascii, int from );`  | `String.lastIndexOf( int ascii, int from );`  |
+
+- `@return int`
+  - `String.compareTo( Object obj );` : alphabetical order (-int = Str is before `obj`; +int = Str is after `obj`; 0 = Str equals `obj`)
+- `@return char`
+  - `String.charAt( int index );`
+- `@return String`
+  - `String.replace( char old, char new );`
+  - `String.replace( String old, String new );`
+  - `String.trim();` : removes whitespace from beginning/end of String (interior whitespace ignored)
+- `@return boolean`
+  - `String.contains( String str );` : returns `true` if `str` is in the String
+  - `String.startsWith( String str );`
+ 
+####Parsing `Strings` with `Scanner`
+
+__`define: delimiter`__ : a series of characters that separates txt in a `Scanner` into separate objects
+
+| Code                                      | Position after execution       |
+|-------------------------------------------|-----------------------------------------------|
+| `Scanner s = new Scanner( "for demo purposes" );`           | `String.lastIndexOf( String str );`           |
+| `System.out.println( s.next() );` | `String.lastIndexOf( String str, int from );` |
+| `System.out.println( sc.findInLine( "ur" );`              | `String.lastIndexOf( char ch );`              |
+| `String ns = s.next(); System.out.println( ns );`    | `String.lastIndexOf( char ch, int from );`    |
+| `String.indexOf( int ascii );`            | `String.lastIndexOf( int ascii );`            |
+| `String.indexOf( int ascii, int from );`  | `String.lastIndexOf( int ascii, int from );`  |
+
 ###`char`
 ```java
 char ch = "A";      // illegal because "A" is a String - double quotes
