@@ -98,7 +98,7 @@ public class ClassName {
 __`define: delimiter`__ : a series of characters that separates txt in a `Scanner` into separate objects
 
 ```php
-// Code                                                       // Position after execution
+// Code                                                       Position after execution
 Scanner sc = new Scanner( "A string for testing scanner" );   // |A string for testing scanner
 System.out.println( sc.next() ); // prints A                  // A| string for testing scanner
 System.out.println( sc.findInLine( "ri" )); // prints ri      // A stri|ng for testing scanner
