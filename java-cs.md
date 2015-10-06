@@ -97,14 +97,14 @@ public class ClassName {
 
 __`define: delimiter`__ : a series of characters that separates txt in a `Scanner` into separate objects
 
-| Code                                      | Position after execution       |
-|-------------------------------------------|-----------------------------------------------|
-| `Scanner s = new Scanner( "for demo purposes" );`   | \*for demo purposes   |
-| `System.out.println( s.next() );`                   | for\* demo purposes    |
-| `System.out.println( sc.findInLine( "ur" );`        | for demo pur\*poses             |
-| `String ns = s.next(); System.out.println( ns );`   | for demo purposes\*    |
-| `s.useDelimiter( "" );`                                 | for demo purposes            |
-| `String.indexOf( int ascii, int from );`            | for demo purposes  |
+| Code                                                          | Position after execution  |
+|---------------------------------------------------------------|---------------------------|
+| `Scanner s = new Scanner( "for demo purposes" );`             | \*for demo purposes       |
+| `System.out.println( s.next() );`                             | for\* demo purposes       |
+| `System.out.println( sc.findInLine( "em" );`                  | for dem\*o purposes       |
+| `String ns = s.next(); System.out.println( ns );`             | for demo\* purposes       |
+| `s.useDelimiter( "r\\s+" ); System.out.println( s.next() );`  | for demo pu\*rposes       |
+| `s.skip( "\\s*rpo" ); System.out.println( s.next() );`        | for demo purposes\*       |
 
 ###`char`
 ```java
