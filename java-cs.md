@@ -97,14 +97,18 @@ public class ClassName {
 
 __`define: delimiter`__ : a series of characters that separates txt in a `Scanner` into separate objects
 
-| Code                                                          | Position after execution  |
-|---------------------------------------------------------------|---------------------------|
-| `Scanner s = new Scanner( "for demo purposes" );`             | \*for demo purposes       |
-| `System.out.println( s.next() );`                             | for\* demo purposes       |
-| `System.out.println( sc.findInLine( "em" );`                  | for dem\*o purposes       |
-| `String ns = s.next(); System.out.println( ns );`             | for demo\* purposes       |
-| `s.useDelimiter( "r\\s+" ); System.out.println( s.next() );`  | for demo pu\*rposes       |
-| `s.skip( "\\s*rpo" ); System.out.println( s.next() );`        | for demo purposes\*       |
+```php
+// Code                                                       // Position after execution
+Scanner sc = new Scanner( "A string for testing scanner" );   // |A string for testing scanner
+System.out.println( sc.next() ); // prints A                  // A| string for testing scanner
+System.out.println( sc.findInLine( "ri" )); // prints ri      // A stri|ng for testing scanner
+String ns = sc.next();                                        // A stri|ng for testing scanner
+System.out.println( ns ); // prints ng                        // A string| for testing scanner
+sc.useDelimiter( "r\\s+" );                                   // A string| for testing scanner
+System.out.println( sc.next() ); // prints fo                 // A string fo|r testing scanner
+sc.skip( "r\\s*test" );                                       // A string for test|ing scanner
+System.out.println( sc.next() ); // prints ing scanner        // A string for testing scanner|
+```
 
 ###`char`
 ```java
