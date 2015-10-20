@@ -41,6 +41,8 @@ __Inline Elements:__ (Flow in between surrounding text)
 <script type="text/javascript" href="http://www.link.com/script.js"></script> = Link to a script
 ```
 
+[Back to Top](#html-cheatsheet)
+
 ###Page Elements
 ```html
 <body></body>                   = Everything that’s shown in the browser window
@@ -60,6 +62,8 @@ class="identifier"              = Attribute used on multiple elements
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
 <![endif]-->
 ```
+
+[Back to Top](#html-cheatsheet)
 
 ###Text
 ```html
@@ -91,6 +95,8 @@ class="identifier"              = Attribute used on multiple elements
 <s></s>                         = Strikethrough (no longer relevant but don’t delete)
 ```
 
+[Back to Top](#html-cheatsheet)
+
 ###Links
 ```html
 <a href="http://www.source.com" target="_blank">Title</a> = Hyperlink (Absolute URL) + open link in new window
@@ -101,6 +107,8 @@ class="identifier"              = Attribute used on multiple elements
 <h1 id="anchor">Anchor<h1>                                = Create links mid-page
 <a href="#anchor">Go to Anchor</a>
 ```
+
+[Back to Top](#html-cheatsheet)
 
 ###Images
 __Rules:__
@@ -125,6 +133,8 @@ __Formats:__
 <figcaption></figcaption>             = Caption for the <img> contained in the <figure> tags
 ```
 
+[Back to Top](#html-cheatsheet)
+
 ###Lists
 ```html
 <ol></ol>                       = Ordered (numbered) lists
@@ -136,6 +146,8 @@ __Formats:__
 <dt></dt>                       = Definition term
 <dd></dd>                       = Definition data
 ```
+
+[Back to Top](#html-cheatsheet)
 
 ###Tables
 ```html
@@ -150,6 +162,8 @@ __Formats:__
 <tbody></tbody>                 = Contains the body of the table
 <tfoot></tfoot>                 = Contains the footer of the table
 ```
+
+[Back to Top](#html-cheatsheet)
 
 ###Forms
 ```html
@@ -177,6 +191,8 @@ __Formats:__
 <legend></legend>               = Used directly after fieldset, captions the fieldset
 ```
 
+[Back to Top](#html-cheatsheet)
+
 #####Input Types
 ```html
 <input type="text" />           = Text field
@@ -192,6 +208,8 @@ __Formats:__
 <input type="url" />            = Submit a URL (data validation on new browsers)
 <input type="search" />         = Search field
 ```
+
+[Back to Top](#html-cheatsheet)
 
 ###Video 
 ```html
@@ -235,6 +253,8 @@ __Above Script:__
 </video>
 ```
 
+[Back to Top](#html-cheatsheet)
+
 ###Audio
 ```html
 <script type="text/javascript"  = SWFObject Script
@@ -269,3 +289,5 @@ __Above Script:__
 <source src="audio/test.ogg" />         = Use like <source> for <video> tags above; type attribute is not commonly used
 </audio>
 ```
+
+[Back to Top](#html-cheatsheet)
