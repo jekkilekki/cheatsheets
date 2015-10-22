@@ -33,28 +33,178 @@ __Table of Contents__
 
 #####Text Notes
 
-```css
+__Font Types__ 
 
+1. Serif = printed (newspaper style) text
+2. Sans-serif (without serif) = screen (modern) text
+3. `Monospace` = code
+4. Cursive = handwriting
+5. Fantasy = decorative
+
+__Font Terms__
+
+1. Ascender = ‘h’ height (taller than a capital letter)
+2. Cap Height = capital letter height
+3. X-Height = height of ‘x’
+4. Baseline
+5. Descender = below baseline
+
+__Methods to use different fonts__ *(be aware of licensing & commercial vs. personal use)*
+
+| Method                        | Description                                             | Disadvantage                    |
+|-------------------------------|---------------------------------------------------------|---------------------------------|
+| `font-family:` = Font-stack   | Browsers display special fonts if installed             | (fonts must be installed)       |
+| `@font-face:`                 | Tells CSS where to download if not installed            | (can slow page loading)         |
+| Service-based `@font-face:`   | Commercial services like TypeKit                        | ($$$)                           |
+| Fonts as images               | Screen-readers use `alt` to know what is said           | (can't copy/paste, not 'fonts') |
+| `sIFR`                        | Javascript replaces text with Flash movie of the font   | (both must be enabled to work)  |
+| `Cufon`                       | Javascript creates an SVG or VML version of the text    | (text can’t change on hover)    |
+| Google Fonts                  | Link to a CSS file and font files on Google servers     | (LEAST restrictive - but external calls) |
+
+__Font sizing__
+
+1. `px` = precise control; 
+2. `%` = a percent of the default; 
+3. `em` = width of letter ‘m’ (relative to parent); 
+4. `rem` = ‘m’ relative to HTML root
+
+| 12px scale                                      | 16px scale                                  |
+|-------------------------------------------------|---------------------------------------------|
+| h1 : 24px; 200%; 1.5em;                         | h1 : 32px; 200%; 2em;                       |
+| h2 : 18px; 150%; 1.3em;                         | h2 : 24px; 150%; 1.5em;                     |
+| h3 : 14px; 117%; 1.17em;                        | h3 : 18px; 133%; 1.125em;                   |
+| body : 12px; 75%; 100%; p : 0.75em; (for IE6/7) | body: 16px; 100%; 100%; p: 1em; (for IE6/7) |
+
+* [REMs vs. EMs](http://css-tricks.com/rems-ems/)
+* [There's more to the CSS REM unit than font-sizing](http://css-tricks.com/theres-more-to-the-css-rem-unit-than-font-sizing/)
+
+```css
+font-family: “Special font”, “Generic font”, Generic, serif;  /* = Font-stack - end with most generic font */
+font-size: 12px; | 200% | 1.3em; | 1.3rem;                    /* = Default size in a browser = 16px */
+
+@font-face { font-family: ‘ChunkFiveRegular’; src: url(‘fonts/chunkfive.eot’); }  /* = Font declaration */
+@font-face {                                                  /* = More complicated font declaration */
+  font-family: ‘ChunkFiveRegular’; 
+  src: url(‘fonts/chunkfive.eot’);                            /* = Embed fonts in the following order */
+  src:  url(‘fonts/chunkfive.eot?#iefix’) format(‘embedded-opentype’),  /* = eot (IE 5-9+) */
+        url(‘fonts/chunkfive.woff’) format(‘woff’),                     /* = woff (IE 9+; Chrome 6+; Firefox 3.6+) */
+        url(‘fonts/chunkfive.ttf’) format(‘truetype’),                  /* = ttf/otf (NOT IE 5-8; NOT iOS<4.2) */
+        url(‘fonts/chunkfive.svg#ChunkFiveRegular’) format(‘svg’);      /*  = svg (NOT IE; NOT Firefox) */
+}
+
+font-weight: light | medium | bold | black | 100...999;       /* = Font thickness
+                                                               *   (Sets text heaviness relative to inherited rules) */
+font-style: normal | italic /* (cursive curls) */ | oblique   /* (normal font at an angle)
+                                                               *   (If no italic font is available, the normal font will be slanted as oblique) */
+font-stretch: condensed | regular | extended                  /* = NOT YET supported by Internet browsers */
+
+text-transform: uppercase; | lowercase; | capitalize;         /* = ALL UPPER, all lower, or Title Style */
+text-decoration: none; | underline; | overline; | line-through; | blink;  /* = FYI: blink is annoying */
+
+/* TYPOGRAPHY */
+line-height: 1.4em;                                           /* = Leading (vertical space between lines); best practice = use ems to keep relative to text size */
+letter-spacing: 0.1em;                                        /* = Kerning (space between each letter) - helpful for all uppercase words; best practice = use ems */
+word-spacing: 0.3em;                                          /* = Default gap is set by typeface (around 0.25em) - rare to have to change; best practice = use ems */
+
+text-align: left; | right; | center; | justify;               /* = FYI: left-aligned is best for paragraphs; justified may be weird */
+vertical-align: baseline; | sub; | super; | top; | text-top; | middle; | bottom; | text-bottom; 
+          /* = Used with inline elements; NOT intended for block elements - can also take length (px or ems) or % of line-height */
+text-indent: -9999px;                                         /* = Can either (1) indent the first line (px or ems) OR (2) push text off a page to show a background-image */
+
+text-shadow: 1px 1px 5px #666666;                             /* = Takes x-distance, y-distance, blur amount, color (can take negative x and y values, rgba, hex, names, etc) */ 
 ```
 
 #####Pseudo Elements
 ```css
+p.intro:first-letter { ... }                    /* = Pseudo-element for the first letter (acts as if an extra code element) */
+p.intro:first-line { ... }                      /* = Pseudo-element for the first line */
+ 
+/* THIS order for link pseudo-elements is good: */
+a:link { ... }                                  /* = Create rules for unvisited links */
+a:visited { ... }                               /* = Create rules for visited links */
+a:hover { ... } | input.submit:hover { ... }    /* = Mouseover actions (doesn’t work on touchscreens like iPads) */
+input.text:focus { ... }                        /* = Rules for when your cursor is inside a textfield */
+a:active { ... } | input.submit:active { ... }  /* = Create rules for activation event */
 
+/* MORE pseduo-elements */
+div:before { ... }                              /* = Something to come directly before the element */
+div:after { ... }                               /* = Something to come directly after the element */
+div:first-child { ... }                         /* = The first of its kind */
+div:nth-child(2) { ... }                        /* = The nth number of its kind */
+div:last-child { ... }                          /* = The last of its kind */
 ```
 
 ###Boxes
 ```css
+/* = Width/height: 
+ * px = most precise; 
+ * % = relative to page size; 
+ * em = based on size of its text
+ */
+width: 300px; | 33%; | 3em; 
+height: 300px; | 33%; | 3em; 
+  min-width: | min-height:                        /* = Smallest box size allowable */
+  max-width: | max-height:                        /* = Largest box size allowable */
+overflow: hidden; | scroll;                       /* = Hide text that extends outside a box’s borders, OR add a scroll bar for the user */
 
+margin: 10px 10px 0px 0px;                        /* = Space OUTSIDE a box: top right bottom left; (px, %, em) */
+  margin: 10px auto 20px auto;                    /* = auto LR margins centers a box (Note: you must set a box width) */
+padding: 10px 0px;                                /* = Space INSIDE a box: top + bottom, left + right (Note: padding + margin are added to width) */
+box-sizing: border-box;                           /* = keeps margin + padding WITHIN the box width (doesn't stretch) */
+
+display: inline; | block; | inline-block; | none; /* = Show elements inline, as blocks, as blocks floating inline, or none */
+visibility: hidden; | visible;                    /* = Hide the element (but leave a blank space) or show it (display:none; removes the element) */
 ```
 
 #####Borders
 ```css
+border: 1px solid silver;                             /* = Order: border-width, border-style, border-color */
+  margin-top: | padding-top: | border-top:            /* = TOP of the box */
+  margin-right: | padding-right: | border-right:      /* = RIGHT of the box */
+  margin-bottom: | padding-bottom: | border-bottom:   /* = BOTTOM of the box */
+  margin-left: | padding-left: | border-left:         /* = LEFT of the box */
 
+border-width: 2px | thin; | medium; | thick;          /* = Assign border width */
+border-width: 2px 5px 20px 5px;                       /* = Assign 4 widths (top, right, bottom, left) */
+border-color: darkcyan deeppink silver black;         /* = Values in RGB, Hex, or Color Names (top right bottom left) */
+border-style: solid; | dotted; | dashed; | double; | groove; | ridge; | inset; | outset; | hidden; | none; 
+
+  border-top-width: | border-top-style: | border-top-color:           /* = TOP border */
+  border-right-width: | border-right-style: | border-right-color:     /* = RIGHT border */
+  border-bottom-width: | border-bottom-style: | border-bottom-color:  /* = BOTTOM border */
+  border-left-width: | border-left-style: | border-left-color:        /* = LEFT border */
 ```
 
 #####CSS3 Boxes
 ```css
+/**
+ * border-image:
+ * Takes: (1) URL, (2) where to slice, (3) what to do with edges: stretch; repeat; round; (scales to fit) 
+ */
+border-image: url(“images/dots.gif”);             /* = Slices bg img into 9 parts for border. */
+  -moz-border-image: url(“images/dots.gif”) 11 11 11 11 stretch;  /* = Top, right, bottom, left slices + stretch*/
+  -webkit-border-image: url(“images/dots.gif”) 11 11 11 11 round; /* = -moz + -webkit = older Chrome, Firefox, Safari */
 
+/**
+ * box-shadow:
+ * (1) Horizontal offset, (2) Vertical offset, (3) Blur distance, (4) Spread of shadow (+ = expand; - = contract)
+ */
+box-shadow: 3px 2px 10px black;
+  -moz-box-shadow: inset 0 0 10px #777777;        /* = inset keyword preceding the values = an inner-shadow */
+  -webkit-box-shadow: 5px 5px;                    /* = If no blur distance, solid line; If no color = no shadow */
+
+/**
+ * border-radius:
+ */
+border-radius: 5px 10px 5px 10px;                 /* = Rounded corners; top-left, top-right, bottom-right, bottom-left */
+  -moz-border-radius: 50%;                        /* = Create a circle */
+  -webkit-border-radius: 80px 50px;               /* = Create an ellipse; first value = horizontal, second = vertical */
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;   /* = Strange shape; first #s = all horizontal, second = all vertical */
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 5px;
 ```
 
 ###Lists
