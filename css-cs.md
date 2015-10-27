@@ -26,7 +26,18 @@ __Table of Contents__
 
 ###Color
 ```css
-
+color: DarkCyan; = There are 147 predefined color names
+color: #ee3e80; | color: #cde; = 6-digit code that shows Red, Green, Blue (2 numbers each - or 1 if both are the same)
+color: rgb(100,100,90); = Red, Green, Blue color values (maximum = 255)
+color: rgba(100,100,90,0.5); = Red, Green, Blue, Alpha (transparency) color values (0.5 = 50% opaque)
+opacity: 0.5; = Sets the transparency of an element (from 0.0 (0% opaque or visible) to 1.0 (100% opaque)
+background-color: transparent; = Background color (default is transparent) - can also use names, hex numbers, and rgb
+(R) Red; (G) Green; (B) Blue = screen colors | (C) Cyan; (M) Magenta; (Y) Yellow; (K) Black = print colors
+(H) Hue = which color; (S) Saturation = amount of gray; (B) Brightness (Photoshop) = amount of black = (L) Lightness (CSS)
+background-color: hsl(100,100,90); = (H) = angle (0-360 degrees); (S) = %; (L) = % (0 white; 50 normal; 100 black)
+background-color: hsla(100,100,90,0.5); = Hue, Saturation, Lightness, Alpha (transparency)
+Tip: Add an extra (plain color) rule (first) for older browsers
+Contrast: Low = hard to read; High = easiest to read (except for lots of text); Medium = best for readability of long texts
 ```
 
 ###Text
