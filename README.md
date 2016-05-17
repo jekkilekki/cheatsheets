@@ -1,5 +1,5 @@
 # Cheatsheets
-A collection of quick-reference glossary-like cheatsheets for various programming languages.
+A collection of quick-reference glossary-like cheatsheets for various programming languages. These are mostly collected from notes I've taken while learning to program.
 
 * Java (AP Computer Science)
 * Git
