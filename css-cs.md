@@ -40,6 +40,8 @@ Tip: Add an extra (plain color) rule (first) for older browsers
 Contrast: Low = hard to read; High = easiest to read (except for lots of text); Medium = best for readability of long texts
 ```
 
+[Back to Top](#css-cheatsheet)
+
 ###Text
 
 #####Text Notes
@@ -125,6 +127,8 @@ text-indent: -9999px;                                         /* = Can either (1
 text-shadow: 1px 1px 5px #666666;                             /* = Takes x-distance, y-distance, blur amount, color (can take negative x and y values, rgba, hex, names, etc) */ 
 ```
 
+[Back to Top](#css-cheatsheet)
+
 #####Pseudo Elements
 ```css
 p.intro:first-letter { ... }                    /* = Pseudo-element for the first letter (acts as if an extra code element) */
@@ -144,6 +148,8 @@ div:first-child { ... }                         /* = The first of its kind */
 div:nth-child(2) { ... }                        /* = The nth number of its kind */
 div:last-child { ... }                          /* = The last of its kind */
 ```
+
+[Back to Top](#css-cheatsheet)
 
 ###Boxes
 ```css
@@ -167,6 +173,8 @@ display: inline; | block; | inline-block; | none; /* = Show elements inline, as 
 visibility: hidden; | visible;                    /* = Hide the element (but leave a blank space) or show it (display:none; removes the element) */
 ```
 
+[Back to Top](#css-cheatsheet)
+
 #####Borders
 ```css
 border: 1px solid silver;                             /* = Order: border-width, border-style, border-color */
@@ -185,6 +193,8 @@ border-style: solid; | dotted; | dashed; | double; | groove; | ridge; | inset; |
   border-bottom-width: | border-bottom-style: | border-bottom-color:  /* = BOTTOM border */
   border-left-width: | border-left-style: | border-left-color:        /* = LEFT border */
 ```
+
+[Back to Top](#css-cheatsheet)
 
 #####CSS3 Boxes
 ```css
@@ -218,6 +228,8 @@ border-radius: 5px 10px 5px 10px;                 /* = Rounded corners; top-left
   border-bottom-left-radius: 5px;
 ```
 
+[Back to Top](#css-cheatsheet)
+
 ###Lists
 ```css
 ul { list-style-type: none;                       /* = Unordered lists bullet points */
@@ -240,6 +252,8 @@ ul {  list-style-image: url(“images/star.png”);   /* = Use image for a bulle
 ol { list-style: circle inside; }                 /* = Shorthand rule to specify list-style-type, list-style-image, or list-style-position in any order */
 ```
 
+[Back to Top](#css-cheatsheet)
+
 ###Tables
 
 __Generally:__
@@ -255,6 +269,8 @@ table { empty-cells: show; | hide; | inherit; }     = Show or hide the borders a
 table { border-spacing: 5px 10px; }                 = Set space between cells: Takes horizontal value, vertical value
 table { border-collapse: collapse; | separate; }    = Collapse borders to single border (previous rules ignored) or separate
 ```
+
+[Back to Top](#css-cheatsheet)
 
 ###Forms
 
@@ -286,6 +302,8 @@ input:not([type=submit]):not([type=file]) { ... }   = Style all <input>s EXCEPT 
 fieldset { ... }                                    = Style fieldset to show the edges of a form with Box and Text styles
 legend { ... }                                      = Style legend to show what information is required in the fieldset with Box and Text styles
 ```
+
+[Back to Top](#css-cheatsheet)
 
 ###Layout
 
@@ -332,6 +350,8 @@ __Common Screen sizes:__
 5120x2880px               = 27” iMac (retina)
 ```
 
+[Back to Top](#css-cheatsheet)
+
 ###Images
 
 `.thumb, .small, .medium, .large, .align-right, .align-left, .align-none` = Assign classes for consistent styling
@@ -346,6 +366,8 @@ img {
   margin: 0 auto;               /* = On the image itself */
 }
 ```
+
+[Back to Top](#css-cheatsheet)
 
 #####Background Images
 
@@ -363,6 +385,8 @@ img {
   background: url(“img1.jpg”) no-repeat top left, url(“img2.jpg”) no-repeat top right;  /* = CSS3 = multiple imgs OK */
 }
 ```
+
+[Back to Top](#css-cheatsheet)
 
 #####Image Sprites
 
@@ -384,6 +408,8 @@ a#class-name:hover { background-position: 0px -40px; }    /* = Hovered button st
 a#class-name:active { background-position: 0px -80px; }   /* = Active button state (touchscreens will show) */
 ```
 
+[Back to Top](#css-cheatsheet)
+
 #####Gradients
 ```css
 #gradient {           /* = Specify a gradient with fallbacks */ 
@@ -398,6 +424,8 @@ a#class-name:active { background-position: 0px -80px; }   /* = Active button sta
 }
 ```
 
+[Back to Top](#css-cheatsheet)
+
 ###Helpful Websites
 
 * CSS testing: BrowserCam.com, BrowserLab.Adobe.com, BrowserShots.org, CrossBrowserTesting.com
@@ -410,3 +438,5 @@ a#class-name:active { background-position: 0px -80px; }   /* = Active button sta
 * Web Developer Toolbar (Firefox + Chrome): www.chrispederick.com/work/web-developer (similar to “Inspect Element”)
 * Frameworks: Grid: www.960.gs, blueprintcss.org, lessframework.com, developer.yahoo.com/yui/grids
 * Frameworks: Responsive: http://www.unsemantic.com
+
+[Back to Top](#css-cheatsheet)
