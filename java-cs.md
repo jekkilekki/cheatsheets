@@ -20,7 +20,7 @@ public class ClassName {
 } // end ClassName
 ```
 
-###Variable Types
+### Variable Types
 - `byte` : 8-bit integer (-128 to 127)
 - `short` : 16-bit integer (-32768 to 32767)
 - **`int`** : 32-bit integer (-2^31 to 2^31-1)
@@ -33,7 +33,7 @@ public class ClassName {
 - **`String`** : array of characters (not a Primitive Type)
   - enclosed in *double* quotes
 
-#####Variable Specifics
+##### Variable Specifics
 - Naming:
   - Begin with letter or underscore _ and can't contain punctuation except _
   - `camelCasingNamingConventions`
@@ -47,7 +47,7 @@ public class ClassName {
   - Change variable types to avoid losing data
   - `int j = (int) 6.0;` casts a double to an int (or int would cut off at the decimal point)
 
-###Strings
+### Strings
 - Declaring:
   - `String s1; s1 = "value";`
   - `String s2 = new String( "value" );`
@@ -68,7 +68,7 @@ public class ClassName {
   - `String.equals( "Test" );` : comparison operator for Strings
   - `String.equalsIgnoreCase( "Test" );` : comparison operator that ignores case
 
-####Advanced `String` Methods:
+#### Advanced `String` Methods:
 
 - `@return int`
 
@@ -93,7 +93,7 @@ public class ClassName {
   - `String.contains( String str );` : returns `true` if `str` is in the String
   - `String.startsWith( String str );`
  
-####Parsing `Strings` with `Scanner`
+#### Parsing `Strings` with `Scanner`
 
 __`define: delimiter`__ : a series of characters that separates txt in a `Scanner` into separate objects
 
@@ -110,7 +110,7 @@ sc.skip( "r\\s*test" );                                       // A string for te
 System.out.println( sc.next() ); // prints ing scanner        // A string for testing scanner|
 ```
 
-###`char`
+### `char`
 ```java
 char ch = "A";      // illegal because "A" is a String - double quotes
 String s = 'B';     // illegal because 'B' is a char - single quotes
@@ -133,7 +133,7 @@ char ch = (char) j; // legal IF cast to char (illegal otherwise) and j < 65536 (
   - `Character.isLowerCase(ch);`
   - `Character.isUpperCase(ch);`
 
-###Operators
+### Operators
 PEMDAS (parenthesis, exponents, multiplication, division, addition, subtraction)
 
 | Standard:               | Compound: | Double:         | Comparison:                   |
@@ -152,7 +152,7 @@ Notes:
 - `x++ || x--` : increments or decrements AFTER use
   - Ex: `int x = 103; System.out.println( x++ );` outputs 103 (and stores 104)
 
-###Math Methods
+### Math Methods
 
 | Simple:                                             | Advanced:                                           |
 |-----------------------------------------------------|-----------------------------------------------------|
@@ -167,7 +167,7 @@ Notes:
 | `Math.random();` = returns random `double` 0<=r<1   | `Math.toRadians(angDeg);` = degrees to radians      |
 | `Math.PI;` = returns 3.14159625...                  |                                                     |
 
-###Input
+### Input
 ```java
 import java.util.Scanner;
 
@@ -193,11 +193,11 @@ public class ClassName {
 } // end ClassName
 ```
 
-#Control Structures
+# Control Structures
   - **Scope:** variables declared in/during *any* Control Structures only pertain to *that* particular Control Structure
   - **Nesting:** "nested ifs" and "nested loops" are ifs *within* if statements and loops *within* loops. Examples below
 
-###`if` statements
+### `if` statements
 ```java
 if ( condition ) {
   command;
@@ -219,7 +219,7 @@ if ( condition ) {
 }
 ```
 
-###`switch`
+### `switch`
 Similar to *if*, allows for multiple (specified) cases.
 
 - **`int`** switch
@@ -274,7 +274,7 @@ switch( choice ) {
 }
 ```
 
-###Loops
+### Loops
 
 - Notes about loops:
   - Loops generally contain 3 parts:
@@ -286,7 +286,7 @@ switch( choice ) {
   - The loop control expression (condition) **_must_** eventually become false or you will have an "infinite loop" 
   - Loops without {} braces are understood to contain *only the __very next__ line* of code and no more
   
-####`for` loops
+#### `for` loops
 
 ```java
 for ( int i = x; i <= y; i++ ) {
@@ -302,7 +302,7 @@ for ( int i = 0; i < 5; i++ ) {
 }
 ```
 
-####`while` and `do while` loops
+#### `while` and `do while` loops
 ```java
 while ( condition ) {
   command;
@@ -320,4 +320,4 @@ do {
   - `while` : condition is tested at the **start** of the loop
   - `do while` : condition is tested at the **end** of the loop
 
-#Classes and Objects
+# Classes and Objects
