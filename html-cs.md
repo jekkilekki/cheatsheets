@@ -1,4 +1,4 @@
-#HTML Cheatsheet
+# HTML Cheatsheet
 
 ![HTML & CSS book](http://ecx.images-amazon.com/images/I/41CRnsnRWhL._AA160_.jpg)
 
@@ -25,7 +25,7 @@ __Block Elements:__ (Start on a new line)
 __Inline Elements:__ (Flow in between surrounding text)
 * `<a>, <b>, <i>, <em>, <strong>, <span>, <img>`
 
-###Head
+### Head
 ```html
 <!DOCTYPE html>                                                               = HTML5 Document Type declaration (precedes everything)
 <html></html>                                                                 = Begin and end the webpage HTML code (surrounds everything)
@@ -43,7 +43,7 @@ __Inline Elements:__ (Flow in between surrounding text)
 
 [Back to Top](#html-cheatsheet)
 
-###Page Elements
+### Page Elements
 ```html
 <body></body>                   = Everything that’s shown in the browser window
 <!-- Comment -->                = Comments
@@ -65,7 +65,7 @@ class="identifier"              = Attribute used on multiple elements
 
 [Back to Top](#html-cheatsheet)
 
-###Text
+### Text
 ```html
 <style></style>                 = Declare CSS styles
 <h1></h1>                       = Main Heading
@@ -97,7 +97,7 @@ class="identifier"              = Attribute used on multiple elements
 
 [Back to Top](#html-cheatsheet)
 
-###Links
+### Links
 ```html
 <a href="http://www.source.com" target="_blank">Title</a> = Hyperlink (Absolute URL) + open link in new window
 <a href="index.html">Title</a>                            = Hyperlink (Relative URL; same folder)
@@ -110,7 +110,7 @@ class="identifier"              = Attribute used on multiple elements
 
 [Back to Top](#html-cheatsheet)
 
-###Images
+### Images
 __Rules:__
 
 1. Use the Right format (jpg, gif, png)
@@ -135,7 +135,7 @@ __Formats:__
 
 [Back to Top](#html-cheatsheet)
 
-###Lists
+### Lists
 ```html
 <ol></ol>                       = Ordered (numbered) lists
 <ol start="4"></ol>             = Where to begin numbering
@@ -149,7 +149,7 @@ __Formats:__
 
 [Back to Top](#html-cheatsheet)
 
-###Tables
+### Tables
 ```html
 <table></table>                 = Table
 <th></th>                       = Table header row
@@ -165,7 +165,7 @@ __Formats:__
 
 [Back to Top](#html-cheatsheet)
 
-###Forms
+### Forms
 ```html
 <form id="name"></form>         = Form (id makes it distinct and may also be used by scripts)
   action="http://www.example.com/subscribe.php"   = The page that receives info when submitted
@@ -193,7 +193,7 @@ __Formats:__
 
 [Back to Top](#html-cheatsheet)
 
-#####Input Types
+##### Input Types
 ```html
 <input type="text" />           = Text field
 <input type="password" />       = Text field with dots for characters
@@ -211,7 +211,7 @@ __Formats:__
 
 [Back to Top](#html-cheatsheet)
 
-###Video 
+### Video 
 ```html
 <script type="text/javascript"  = SWFObject Script
   src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
@@ -227,7 +227,7 @@ __Above Script:__
 3. Width / Height
 4. Minimum version of Flash player needed = `"8.0.0"`
 
-#####HTML5 Video How To
+##### HTML5 Video How To
 
 `<video></video>` = HTML5 tag for Video
 
@@ -255,7 +255,7 @@ __Above Script:__
 
 [Back to Top](#html-cheatsheet)
 
-###Audio
+### Audio
 ```html
 <script type="text/javascript"  = SWFObject Script
   src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js">
@@ -267,7 +267,7 @@ __Above Script:__
 </script> 
 ```
 
-#####HTML5 Audio How To
+##### HTML5 Audio How To
 
 `<audio></audio>` = HTML5 tag for Audio
 
