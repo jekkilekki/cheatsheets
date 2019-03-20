@@ -1,4 +1,4 @@
-#`git` Cheatsheet
+# `git` Cheatsheet
 
 ![Lynda logo](http://cdn.lynda.com/assets/1730-r20151015/Website/ui/images/mediakit/logos-gif/lynda_logo1k-d_72x72.gif)
 
@@ -23,7 +23,7 @@ __Table of Contents:__
 15. [`git` Remotes](#git-remotes)
 16. [Collaboration Workflow Example](#collaboration-workflow-example)
 
-###`git` Help
+### `git` Help
 ```bash
 which git                                               = Do I have git? What’s its path?
 git -- version                                          = Which version of git?
@@ -34,7 +34,7 @@ git <command> --help                                    = Same as above
 
 [Back to top](#git-cheatsheet)
 
-###`git` Setup
+### `git` Setup
 ```bash
 git init                                                = Initialize git here
 git clone <url>                                         = Clone a remote repo here
@@ -44,7 +44,7 @@ git clone -b <branch> <url>                             = Clone a different bran
 
 [Back to top](#git-cheatsheet)
 
-###`git` Configuration
+### `git` Configuration
 ```bash
 git config                                              = Git config for Project
 git config --global                                     = Git config for User
@@ -60,7 +60,7 @@ cat ~/.gitconfig                                        = Show what’s in User 
 
 [Back to top](#git-cheatsheet)
 
-###`git` Auto-completion (Mac)
+### `git` Auto-completion (Mac)
 ```bash
 cd ~                                                    = Change to User directory
 
@@ -80,7 +80,7 @@ __git_ps1                                               = Shows current branch
 
 [Back to top](#git-cheatsheet)
 
-###Common `git` Aliases
+### Common `git` Aliases
 ```bash
 git config --global alias.st “status”
 git config --global alias.co checkout
@@ -94,7 +94,7 @@ git config --global alias.logg “log --graph --decorate
 
 [Back to top](#git-cheatsheet)
 
-###Common `git` Commands
+### Common `git` Commands
 ```bash
 ~/                                                      = User directory
 pwd                                                     = Check Present Working Directory path
@@ -109,7 +109,7 @@ git status                                              = What’s going on with
 
 [Back to top](#git-cheatsheet)
 
-###Simple `git` Workflow
+### Simple `git` Workflow
 ```bash
 git status                                              = What’s going on with git?
 git add <file>                                          = Add this file to Staging Index
@@ -123,7 +123,7 @@ git log                                                 = Show previous commits
 
 [Back to top](#git-cheatsheet)
 
-###`git` Tree-ish
+### `git` Tree-ish
 ```bash
 master | HEAD | <SHA#> | HEAD^ | HEAD^^ | HEAD~3        = <tree-ish>
 git ls-tree <tree-ish>                                  = List your trees
@@ -131,7 +131,7 @@ git ls-tree <tree-ish>                                  = List your trees
 
 [Back to top](#git-cheatsheet)
 
-###`git` Logs
+### `git` Logs
 ```bash
 git log --oneline -3                                    = Show condensed git log (with 7-digit SHA#) for only the previous 3 commits
 git log --since=“2014-08-31”                            = Show commits since (also after) that date
@@ -150,7 +150,7 @@ git log --format=oneline | =short | =medium | =full | =fuller | =email | =raw   
 
 [Back to top](#git-cheatsheet)
 
-###`git` Compare Differences
+### `git` Compare Differences
 ```bash
 git diff <SHA#>                                         = Compare difference between HEAD and SHA#
 git diff <SHA#> <file>                                  = Compare difference between HEAD and SHA# of a particular file
@@ -166,7 +166,7 @@ git show --format=oneline HEAD                          = Show condensed diff in
 
 [Back to top](#git-cheatsheet)
 
-###`git` Stash
+### `git` Stash
 ```bash
 git stash save “Message”                                = Put something in the Stash
 git stash list                                          = Returns stash@{#}: On <branch>: “Message” = Shows what you’ve got where
@@ -180,7 +180,7 @@ git stash clear                                         = Delete EVERYTHING from
 
 [Back to top](#git-cheatsheet)
 
-###`git` Branches
+### `git` Branches
 ```bash
 git branch                                              = Show branches in Working Directory (show * next to current branch)
 git branch <new_branch>                                 = Make a new branch
@@ -197,7 +197,7 @@ git branch -a                                           = Show ALL branches
 
 [Back to top](#git-cheatsheet)
 
-###`git` Merges
+### `git` Merges
 ```bash
 git diff <branch> <branch>                              = Compare two branches
 git checkout master                                     = Switch to branch to RECEIVE changes
@@ -210,7 +210,7 @@ git mergetool tool=tool_name                            = Call a merge tool
 
 [Back to top](#git-cheatsheet)
 
-###`git` Deletion and Changes
+### `git` Deletion and Changes
 ```bash
 git mv <old-name> <new-name>                            = Move/Rename
 git rm <file>                                           = Delete that file
@@ -230,7 +230,7 @@ git clean -f                                            = Remove untracked files
 
 [Back to top](#git-cheatsheet)
 
-###`git` Remotes
+### `git` Remotes
 ```bash
 origin/master                                           = The remote repo on your local machine
 git diff origin/master..master                          = Check remote and local
@@ -253,9 +253,9 @@ git push origin --delete <non_tracking>                 = Delete a non-tracking 
 
 [Back to top](#git-cheatsheet)
 
-#Collaboration Workflow Example
+# Collaboration Workflow Example
 
-#####You
+##### You
 ```bash
 1. Set up the remote repo + push the master branch
 2. git checkout master                                  = Switch to master
@@ -269,7 +269,7 @@ git push origin --delete <non_tracking>                 = Delete a non-tracking 
 10. Email colleague about the changes
 ```
 
-#####Colleague
+##### Colleague
 ```bash
 1. git clone <url>                                      = Create the repo on her desktop if not already present
 2. git checkout master                                  = Switch to master
@@ -286,7 +286,7 @@ git push origin --delete <non_tracking>                 = Delete a non-tracking 
 13. Email reply
 ```
 
-#####You
+##### You
 ```bash
 1. git fetch                                            = Anything new?
 2. git log -p <new_feature>..origin/<new_feature>       = Show the “patch” (exact changes) to the new feature branch
