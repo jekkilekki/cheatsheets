@@ -1,4 +1,4 @@
-#CSS Cheatsheet
+# CSS Cheatsheet
 
 ![HTML & CSS book](http://ecx.images-amazon.com/images/I/41CRnsnRWhL._AA160_.jpg)
 
@@ -7,24 +7,24 @@ HTML notes can be found here.
 
 __Table of Contents__
 
-###Notes
+### Notes
 
-###HTML
+### HTML
 ```css
 
 ```
 
-###CSS Selectors
+### CSS Selectors
 ```css
 
 ```
 
-###CSS Attribute Selectors
+### CSS Attribute Selectors
 ```css
 
 ```
 
-###Color
+### Color
 ```css
 color: DarkCyan; = There are 147 predefined color names
 color: #ee3e80; | color: #cde; = 6-digit code that shows Red, Green, Blue (2 numbers each - or 1 if both are the same)
@@ -42,9 +42,9 @@ Contrast: Low = hard to read; High = easiest to read (except for lots of text); 
 
 [Back to Top](#css-cheatsheet)
 
-###Text
+### Text
 
-#####Text Notes
+##### Text Notes
 
 __Font Types__ 
 
@@ -129,7 +129,7 @@ text-shadow: 1px 1px 5px #666666;                             /* = Takes x-dista
 
 [Back to Top](#css-cheatsheet)
 
-#####Pseudo Elements
+##### Pseudo Elements
 ```css
 p.intro:first-letter { ... }                    /* = Pseudo-element for the first letter (acts as if an extra code element) */
 p.intro:first-line { ... }                      /* = Pseudo-element for the first line */
@@ -151,7 +151,7 @@ div:last-child { ... }                          /* = The last of its kind */
 
 [Back to Top](#css-cheatsheet)
 
-###Boxes
+### Boxes
 ```css
 /* = Width/height: 
  * px = most precise; 
@@ -175,7 +175,7 @@ visibility: hidden; | visible;                    /* = Hide the element (but lea
 
 [Back to Top](#css-cheatsheet)
 
-#####Borders
+##### Borders
 ```css
 border: 1px solid silver;                             /* = Order: border-width, border-style, border-color */
   margin-top: | padding-top: | border-top:            /* = TOP of the box */
@@ -196,7 +196,7 @@ border-style: solid; | dotted; | dashed; | double; | groove; | ridge; | inset; |
 
 [Back to Top](#css-cheatsheet)
 
-#####CSS3 Boxes
+##### CSS3 Boxes
 ```css
 /**
  * border-image:
@@ -230,7 +230,7 @@ border-radius: 5px 10px 5px 10px;                 /* = Rounded corners; top-left
 
 [Back to Top](#css-cheatsheet)
 
-###Lists
+### Lists
 ```css
 ul { list-style-type: none;                       /* = Unordered lists bullet points */
                       disc; (●)
@@ -254,7 +254,7 @@ ol { list-style: circle inside; }                 /* = Shorthand rule to specify
 
 [Back to Top](#css-cheatsheet)
 
-###Tables
+### Tables
 
 __Generally:__
 
@@ -272,7 +272,7 @@ table { border-collapse: collapse; | separate; }    = Collapse borders to single
 
 [Back to Top](#css-cheatsheet)
 
-###Forms
+### Forms
 
 __Generally:__
 
@@ -305,7 +305,7 @@ legend { ... }                                      = Style legend to show what 
 
 [Back to Top](#css-cheatsheet)
 
-###Layout
+### Layout
 
 | Types of document layouts                                             | Advantages            | Disadvantages             |
 |-----------------------------------------------------------------------|-----------------------|---------------------------|
@@ -352,7 +352,7 @@ __Common Screen sizes:__
 
 [Back to Top](#css-cheatsheet)
 
-###Images
+### Images
 
 `.thumb, .small, .medium, .large, .align-right, .align-left, .align-none` = Assign classes for consistent styling
 
@@ -369,7 +369,7 @@ img {
 
 [Back to Top](#css-cheatsheet)
 
-#####Background Images
+##### Background Images
 
 * High-contrast imgs = photos (no good for bg); 
 * Low-contrast = OK for bg; OR overlay text with a semi-transparent background
@@ -388,7 +388,7 @@ img {
 
 [Back to Top](#css-cheatsheet)
 
-#####Image Sprites
+##### Image Sprites
 
 __Sprites__ = using a SINGLE image (with multiple image parts) and using CSS to allow only one part to show at any time
 
@@ -410,7 +410,7 @@ a#class-name:active { background-position: 0px -80px; }   /* = Active button sta
 
 [Back to Top](#css-cheatsheet)
 
-#####Gradients
+##### Gradients
 ```css
 #gradient {           /* = Specify a gradient with fallbacks */ 
   background-color: #66cccc;                                                                /* fallback color */
@@ -426,7 +426,7 @@ a#class-name:active { background-position: 0px -80px; }   /* = Active button sta
 
 [Back to Top](#css-cheatsheet)
 
-###Helpful Websites
+### Helpful Websites
 
 * CSS testing: BrowserCam.com, BrowserLab.Adobe.com, BrowserShots.org, CrossBrowserTesting.com
 * CSS bugs: PositionIsEverything.net, QuirksMode.org
@@ -440,3 +440,13 @@ a#class-name:active { background-position: 0px -80px; }   /* = Active button sta
 * Frameworks: Responsive: http://www.unsemantic.com
 
 [Back to Top](#css-cheatsheet)
+
+## Supplementary
+
+### Flexbox
+
+### CSS Grid
+
+### Transitions 
+
+### Animations
